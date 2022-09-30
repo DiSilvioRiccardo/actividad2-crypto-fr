@@ -25,6 +25,9 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
                 x = ""
                 with open("x.txt", "r") as xfile:
                     x = xfile.read()
+                
+                #aqui mandaria la funcion en texto plano pero para ahorrarle el tiempo de copiar y pegar del terminal, puede simplemente
+                #copiar el archivo del repo o del codigo del atacante
                 message = bytes("x=" + x + " funcion=https://github.com/DiSilvioRiccardo/actividad2-crypto-fr/blob/main/attacker_code/file_decrypter.py", encoding = "utf-8")
                 conn.sendall(message)
 
